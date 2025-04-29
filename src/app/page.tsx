@@ -15,17 +15,17 @@ export default function Home() {
           <p>Tough day? Buy some expensive stuff and become happy again!</p>
           <Button asChild>
             <Link href="/shop">
-              {" "}
               Shot Now <ArrowRight className="ml-2 size-5" />
             </Link>
           </Button>
-          <div className="hidden md:block w-1/2 h-full">
-            <Image
-              src={banner}
-              className="h-full object-cover"
-              alt="Flow Shop banner"
-            />
-          </div>
+        </div>
+        <div className="relative hidden md:block w-1/2 h-full">
+          <Image
+            src={banner}
+            className="h-full object-cover"
+            alt="Flow Shop banner"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary via-transparent to-transparent"></div>
         </div>
       </div>
     </main>
