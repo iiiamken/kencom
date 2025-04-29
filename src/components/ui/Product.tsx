@@ -14,11 +14,18 @@ export default function Product({ product }: ProductProps) {
     : null
 
   return (
-    <Link href={`/products/${product.slug}`}>
+    <Link href={`/products/${product.slug}`} className="border h-full">
       <img
         src={resizedImageUrl || "/placeholder.png"}
         alt={mainImage?.altText || ""}
       />
+      <div className="space-y-3 p-3">
+        <h3 className="text-lg font-bold">{product.name}</h3>
+        <div
+          className="line-clamp-5"
+          dangerouslySetInnerHTML={{ __html: product.description || "" }}
+        />
+      </div>
     </Link>
   )
 }
