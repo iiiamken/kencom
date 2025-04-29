@@ -6,6 +6,8 @@ import { ArrowRight } from "lucide-react"
 import { delay } from "@/lib/utils"
 import { Suspense } from "react"
 import { getWixClient } from "@/lib/wix-client-base"
+import Product from "@/components/ui/Product"
+import { products } from "@wix/stores"
 
 export default function Home() {
   return (
@@ -62,7 +64,11 @@ async function FeaturedProducts() {
   return (
     <div className="space-y-5">
       <h2 className="text-2xl font-bold">Featured Products</h2>
-      <div className="flex sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+      <div className="flex sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {featuredProducts.items.map((product) => (
+          <Product key={product._id} product={product} />
+        ))}
+      </div>
     </div>
   )
 }
