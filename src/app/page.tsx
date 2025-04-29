@@ -3,6 +3,7 @@ import banner from "@/assets/banner.jpg"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { delay } from "@/lib/utils"
 
 export default function Home() {
   return (
@@ -30,4 +31,9 @@ export default function Home() {
       </div>
     </main>
   )
+}
+
+async function FeaturedProducts() {
+  await delay(1000)
+  return "Featured products"
 }
