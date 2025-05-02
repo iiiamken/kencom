@@ -1,14 +1,13 @@
-import Image from "next/image"
 import banner from "@/assets/banner.jpg"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { delay } from "@/lib/utils"
-import { Suspense } from "react"
-import { getWixClient } from "@/lib/wix-client-base"
-import Product from "@/components/ui/Product"
-import { products } from "@wix/stores"
+import Product from "@/components/Product"
 import { Skeleton } from "@/components/ui/skeleton"
+import { delay } from "@/lib/utils"
+import { getWixClient } from "@/lib/wix-client-base"
+import { ArrowRight } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { Suspense } from "react"
 
 export default function Home() {
   return (
